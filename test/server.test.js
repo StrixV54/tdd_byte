@@ -29,4 +29,12 @@ describe('Tests Add Function', () => {
         let result = add('7\n6,3,4');
         expect(result).toBe(20);
     })
+    test('should return 10 for an input of "//;\n1;2;7"', () => {
+        let result = add('//;\n1;2;7');
+        expect(result).toBe(10);
+    })
+    test('should return 10 for an input of "//;;\n1;;2;;7"', () => {
+        let result = add('//;;\n1;;2;;7');
+        expect(result).toBe(10);
+    })
 });
