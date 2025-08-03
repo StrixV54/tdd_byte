@@ -1,0 +1,24 @@
+{
+  "name": "tdd_byte",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StrixV54/tdd_byte.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StrixV54/tdd_byte/issues"
+  },
+  "homepage": "https://github.com/StrixV54/tdd_byte#readme",
+  "devDependencies": {
+    "jest": "^30.0.5"
+  }
+}
