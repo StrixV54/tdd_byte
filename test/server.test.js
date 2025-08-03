@@ -22,8 +22,9 @@ describe('Tests Add Function', () => {
         expect(result).toBe(72222221);
     })
     test('should return -1 for an input of "-5,5,3,-4"', () => {
-        let result = add('-5,5,3,-4');
-        expect(result).toBe(-1);
+        // let result = add('-5,5,3,-4');
+        // expect(result).toBe(-1);  // changed after refactor for negative numbers
+        expect(() => add('-5,5,3,-4')).toThrow("Negative number not allowed -5, -4");
     })
     test('should return 20 for an input of "7\n6,3,4"', () => {
         let result = add('7\n6,3,4');
@@ -36,5 +37,8 @@ describe('Tests Add Function', () => {
     test('should return 10 for an input of "//;;\n1;;2;;7"', () => {
         let result = add('//;;\n1;;2;;7');
         expect(result).toBe(10);
+    })
+    test('should return error message printing negative numbers for an input of "//;\n1;2;-3;4;-6;7"', () => {
+        expect(() => add('//;\n1;2;-3;4;-6;7')).toThrow("Negative number not allowed -3, -6");
     })
 });
